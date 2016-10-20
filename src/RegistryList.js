@@ -16,6 +16,13 @@ export default class extends React.Component {
     render() {
         return (
             <div>
+                <h1>My Registry</h1>
+                {this.state.registryItems.map((item) => {
+                    return (
+                    <div key={item.id}>
+                        <RegistryItem itemDetails={item}/>
+                    </div>)
+                })}
             </div>
         );
     }
